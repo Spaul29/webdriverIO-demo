@@ -30,7 +30,7 @@
 
 ## Test configuration
 
-- Test configurations can be changed ( i.e., Android/iOS, Parallel Test, Retries, Device Farms, Reporting etc ) as per needs in the config files in [config]() folder
+- Test configurations can be changed ( i.e., Android/iOS, Parallel Test, Retries, Device Farms, Reporting etc ) as per needs in the config files in [config](https://github.com/Spaul29/webdriverIO-demo/tree/main/config) folder
 
 ## Locator strategy for project
 
