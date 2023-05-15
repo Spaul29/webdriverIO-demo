@@ -42,5 +42,5 @@
 
 - To run test locally on android emulator - `npm run wdio:android`
 - To run test locally on iOS simulator - `npm run wdio:ios`
-- To run test 
+- To run test on browserstack android device - `npm run wdio:bs-android`
 

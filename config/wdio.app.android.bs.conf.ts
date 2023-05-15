@@ -33,10 +33,6 @@ config.capabilities = [
         'appium:automationName': 'UiAutomator2',
         // The path to the app
         'appium:app': 'bs://fac5033e837a1d3500e0a1fd975eee66055eaa15',
-
-       /* "appium:appWaitActivity": 'com.swaglabsmobileapp.MainActivity',
-        'appium:noReset': false,
-        'appium:newCommandTimeout': 240,*/
     },
 ];
 
