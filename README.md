@@ -24,8 +24,8 @@
 ## Project setup
 
 - clone the repository  
-  `git clone `
-- install the dependencies  
+  `git clone https://github.com/Spaul29/webdriverIO-demo.git`
+- install the dependencies
   `npm install`
 
 ## Test configuration
