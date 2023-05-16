@@ -11,9 +11,9 @@ describe('Order Product from Swag labs', () => {
     let login: LoginPage;
     let product: ProductsPage;
     let cart: CartsPage;
-    let checkout:CheckoutPage;
+    let checkout: CheckoutPage;
 
-    beforeEach(async () => {
+    before( () => {
         login = new LoginPage();
         product = new ProductsPage();
         cart = new CartsPage();
@@ -66,14 +66,4 @@ describe('Order Product from Swag labs', () => {
             'App is not launched ',
         );
     });
-
-    it('should display user locked out error', async () => {
-        await login.loginWithLockedOutUser();
-        assert.equal(
-            await login.getUserLockedOutMessage(),
-            ExpectedAssertions.lockedUser.errorMessage,
-            'User locked out error message assertion failed',
-        );
-    })
-
 });

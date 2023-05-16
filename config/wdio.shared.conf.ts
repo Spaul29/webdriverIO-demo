@@ -1,4 +1,3 @@
-const allure = require('allure-commandline')
 /**
  * All not needed configurations, for this boilerplate, are removed.
  * If you want to know which configuration options you have then you can
@@ -75,7 +74,7 @@ export const config: WebdriverIO.Config = {
      * NOTE: This has been increased for more stable Appium Native app
      * tests because they can take a bit longer.
      */
-    waitforTimeout: 45000,
+    waitforTimeout: 10000,
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
     connectionRetryTimeout: 120000,
@@ -111,9 +110,7 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results',
-        disableWebdriverStepsReporting: false,
-        disableWebdriverScreenshotsReporting: false}]],
+    reporters: ['spec'],
     // Options to be passed to Jasmine.
     mochaOpts: {
         ui: 'bdd',
@@ -130,30 +127,5 @@ export const config: WebdriverIO.Config = {
     /**
      * NOTE: No Hooks are used in this project, but feel free to add them if you need them.
      */
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        if (error) {
-            await driver.takeScreenshot();
-        }
-    },
 
-    onComplete: async function() {
-        const reportError = new Error('Could not generate Allure report')
-        const generation = allure(['generate', 'allure-results', '--clean'])
-        return new Promise<void>((resolve, reject) => {
-            const generationTimeout = setTimeout(
-                () => reject(reportError),
-                5000)
-
-            generation.on('exit', function(exitCode : any) {
-                clearTimeout(generationTimeout)
-
-                if (exitCode !== 0) {
-                    return reject(reportError);
-                }
-
-                console.log('Allure report successfully generated');
-                resolve()
-            })
-        })
-    },
 };

@@ -11,7 +11,7 @@ config.key = process.env.BROWSERSTACK_ACCESS_KEY;
 // Specs
 // ============
 config.specs = [
-    '../tests/specs/OrderProduct.spec.ts',
+    '../tests/specs/*.spec.ts',
 ];
 //
 // ======

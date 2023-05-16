@@ -4,7 +4,7 @@ import { config } from '../config/wdio.shared.conf';
 // ============
 // Specs
 // ============
-config.specs = ['../tests/specs/OrderProduct.spec.ts'];
+config.specs = ['../tests/specs/*.spec.ts'];
 
 //
 // ======
