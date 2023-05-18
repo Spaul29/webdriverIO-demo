@@ -9,7 +9,6 @@
 
 #Reporting
 - Spec
-- Allure
 
 ## Local machine setup
 
