@@ -1,6 +1,6 @@
 export const TestData = {
     checkout: {
-        firstName: 'John',
+        firstName: 'Johny',
         lastName: 'Rood1',
         zipCode: '7253752'
     },
